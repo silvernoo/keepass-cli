@@ -1,6 +1,17 @@
 # kpass
 
-`kpass` is a focused Rust CLI for reading KeePass KDBX databases. The first version is intentionally read-only: it provides safe inspection and search before adding commands that can mutate a password vault.
+An interactive Rust CLI for securely browsing and managing KeePass KDBX password databases.
+
+`kpass` supports interactive search, password viewing, entry creation, keyfiles, KDBX 4.x read/write, protected fields, tags, and atomic database saves.
+
+## Releases
+
+Release artifacts are built automatically for Linux, macOS, and Windows when a `v*` tag is pushed. Each release includes the target triple and a `SHA256SUMS` file.
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
 
 ## Usage
 
@@ -46,6 +57,8 @@ cargo check
 
 `info` only parses the public KDBX header and is useful for checking a file without unlocking it.
 
+
+## KDBX field compatibility
 
 KeePass entries use a map of string fields rather than a fixed database column layout. The five conventional fields are stored with these exact names: `Title`, `UserName`, `Password`, `URL`, and `Notes`. Custom string fields are valid KDBX data and are preserved.
 

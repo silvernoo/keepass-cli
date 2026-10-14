@@ -3,7 +3,7 @@ name = "kpass"
 version = "0.1.0"
 edition = "2021"
 rust-version = "1.89"
-description = "A focused, secure CLI for KeePass KDBX databases"
+description = "An interactive Rust CLI for securely browsing and managing KeePass KDBX password databases"
 license = "MIT"
 
 [dependencies]
