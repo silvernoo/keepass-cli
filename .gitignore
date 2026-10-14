@@ -1,0 +1,4 @@
+/target
+*.kdbx
+*.key
+.env
